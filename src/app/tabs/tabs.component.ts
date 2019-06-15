@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'app-tabs',
@@ -8,7 +7,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 })
 export class TabsComponent implements OnInit {
 
-  constructor(private tabs: MatTabsModule) { }
+  constructor() { }
 
   ngOnInit() {
   }
