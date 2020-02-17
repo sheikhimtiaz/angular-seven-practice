@@ -1,0 +1,24 @@
+// .demo-tab-group {
+//     border: 1px solid #e8e8e8;
+//   }
+  
+//   .demo-tab-content {
+//     padding: 16px;
+//   }
+  
+//   .mat-tab-label-active{
+//     background-color: red ;
+//     opacity: 1 !important;
+//   }
+    /* Styles for tab labels */
+
+::ng-deep .mat-ink-bar {
+    background-color:#A21C37 !important;
+}
+
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

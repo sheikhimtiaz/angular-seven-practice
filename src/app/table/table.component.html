@@ -1,4 +1,53 @@
-<!-- <p>
-  table works!
-</p> -->
+<div>
+    <h4> List of policies </h4>
+    
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" class="bold"
+    matSort matSortActive="policyNumber" matSortDirection="asc" matSortDisableClear>
+    
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- product Column -->
+        <ng-container matColumnDef="product">
+          <th mat-header-cell *matHeaderCellDef> Product </th>
+          <td mat-cell *matCellDef="let element" class="red"> {{element.product}} </td>
+        </ng-container>
+      
+        <!-- policyNumber Column -->
+        <ng-container matColumnDef="policyNumber">
+          <th mat-header-cell *matHeaderCellDef> Policy Number </th>
+          <td mat-cell *matCellDef="let element"> {{element.policyNumber}} </td>
+        </ng-container>
+      
+        <!-- policyStartDate Column -->
+        <ng-container matColumnDef="policyStartDate">
+          <th mat-header-cell *matHeaderCellDef> Policy Start Date </th>
+          <td mat-cell *matCellDef="let element"> {{element.policyStartDate}} </td>
+        </ng-container>
+      
+        <!-- policyDateInForce Column -->
+        <ng-container matColumnDef="policyDateInForce">
+          <th mat-header-cell *matHeaderCellDef> Policy date in-force </th>
+          <td mat-cell *matCellDef="let element"> {{element.policyDateInForce}} </td>
+        </ng-container>
+      
+        <!-- policyCountryCurrency Column -->
+        <ng-container matColumnDef="policyCountryCurrency">
+          <th mat-header-cell *matHeaderCellDef> Policy Law Country/ Currency </th>
+          <td mat-cell *matCellDef="let element"> {{element.policyCountryCurrency}} </td>
+        </ng-container>
+      
+        <!-- policyStatus Column -->
+        <ng-container matColumnDef="policyStatus">
+          <th mat-header-cell *matHeaderCellDef> Policy status </th>
+          <td mat-cell *matCellDef="let element"> {{element.policyStatus}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
 
+      <mat-paginator [length]="size" [pageSize]="5"
+      [pageSizeOptions]="[5, 10, 15]"></mat-paginator>
+
+</div>
